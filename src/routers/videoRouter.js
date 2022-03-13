@@ -3,10 +3,11 @@ import { see, edit, upload, deleteVideo } from "../controllers/videoController";
 
 const videoRouter = express.Router();
 
-// Text URL ( /upload ) Parameter URL ( /:id ) 순서 중요
 videoRouter.get("/upload", upload);
-videoRouter.get("/:id", see);
-videoRouter.get("/:id/edit", edit);
-videoRouter.get("/:id/delete", deleteVideo);
+// Regular Expression 활용하여 Parameters URL 만들기
+// id에는 이제 숫자만 들어갈 수 있다.
+videoRouter.get("/:id(\\d+)", see);
+videoRouter.get("/:id(\\d+)/edit", edit);
+videoRouter.get("/:id(\\d+)/delete", deleteVideo);
 
 export default videoRouter;
