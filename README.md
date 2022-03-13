@@ -6,11 +6,12 @@
   - /login -> Login
   - /search -> Search
 - User 라우터
-  - /user/edit -> Edit user
-  - /user/delete -> Delete user
+  - /users/:id -> See User
+  - /users/logout -> Log Out
+  - /user/edit -> Edit My Profile
+  - /user/delete -> Delete My Profile
 - Video 라우터
-  - /videos/watch -> Watch Video
-  - /videos/edit -> Edit Video
-  - /videos/delete -> Delete Video
-  - /videos/comment -> Comment on a Video
-  - /videos/comment/delete -> Delete A Comment of a Video
+  - /videos/:id -> Watch Video
+  - /videos/:id/edit -> Edit Video
+  - /videos/:id/delete -> Delete Video
+  - /videos/upload -> Upload Video
