@@ -1,12 +1,11 @@
 export const trending = (req, res) => {
-  // home.pug - rendering
   res.render("home");
 };
 export const see = (req, res) => {
-  res.send(`Watch Video #${req.params.id}`);
+  res.render("watch");
 };
 export const edit = (req, res) => {
-  res.send("Edit Videos");
+  res.render("edit");
 };
 export const search = (req, res) => {
   res.send("Search");
