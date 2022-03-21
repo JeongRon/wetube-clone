@@ -8,7 +8,6 @@ Video.find({}, (error, videos) => {
 console.log("finished")
 */
 export const home = async (req, res) => {
-  console.log("Start");
   const videos = await Video.find({});
   return res.render("home", { pageTitle: "Home", videos });
 };
