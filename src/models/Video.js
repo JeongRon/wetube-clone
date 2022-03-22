@@ -11,21 +11,5 @@ const videoSchema = new mongoose.Schema({
   },
 });
 
-/*
-<< schema Example - data >>
- 
-const video = {
-  title: "Heki",
-  descripton: "lalalal",
-  createdAt: 121212,
-  hashtags: ["#hi", "#mongo"],
-  meta: {
-      views: 234,
-      rating: 412,
-  }
-};
-
-*/
-
 const Video = mongoose.model("Video", videoSchema);
 export default Video;
