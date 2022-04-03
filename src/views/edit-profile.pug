@@ -8,3 +8,8 @@ block content
         input(placeholder="Username", name="username", type="text", required, value=loggedInUser.username)
         input(placeholder="Location", name="location", type="text", required, value=loggedInUser.location)
         input(type="submit", value="Update Profile")
+        hr
+        if loggedInUser.socialOnly
+            a(href="/") Github Login can't change password &rarr;           
+        else 
+            a(href="change-password") Change Password &rarr;        
