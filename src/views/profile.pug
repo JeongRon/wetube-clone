@@ -4,8 +4,14 @@ include mixins/video.pug
 
 block content
     div.profile__data
-        img(src="/" + user.avatarUrl).avatar
-        h3=user.name
+        if !user.avatarUrl
+            span.icon 😀
+        else if user.avatarUrl[0]==="h"
+            img(src= user.avatarUrl).avatar
+        else 
+            img(src="/" + user.avatarUrl).avatar
+        div
+            h3=user.name
     div.video-grid
         each video in user.videos
             +video(video)

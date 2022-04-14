@@ -162,6 +162,14 @@ header .header__btn {
   padding: 5px 10px;
   border-radius: 5px;
 }
+header .header__icon {
+  font-size: 20px;
+}
+header .header__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
 
 footer {
   text-align: center;
@@ -212,6 +220,11 @@ footer {
   width: 150px;
   height: 150px;
   border-radius: 50%;
+}
+
+.icon {
+  font-size: 40px;
+  margin-bottom: 30px;
 }
 
 form {
@@ -307,7 +320,7 @@ input[type=submit],
 
 form label {
   font-size: 14px;
-  margin-bottom: 10px;
+  margin: 10px 0;
   display: block;
 }
 
