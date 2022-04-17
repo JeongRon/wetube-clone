@@ -410,6 +410,28 @@ form label {
   margin-bottom: 10px;
 }
 
+.video__data {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.video__data .video__title {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.video__data .video__createdAt {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.video__data .video__owner {
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+.video__data .video__owner a {
+  color: cornflowerblue;
+  text-decoration: underline;
+}
+
 a {
   color: inherit;
   text-decoration: none;
