@@ -6,9 +6,9 @@ block content
         if !loggedInUser.avatarUrl
             span.icon 😀
         else if loggedInUser.avatarUrl[0]==="h"
-            img(src= loggedInUser.avatarUrl, width="70" height="70")
+            img(src= loggedInUser.avatarUrl,crossorigin, width="70" height="70")
         else 
-            img(src="/" + loggedInUser.avatarUrl, width="70" height="70")
+            img(src="/" + loggedInUser.avatarUrl,crossorigin, width="70" height="70")
         label(for="avatar") Avatar
         input(type="file", id="avatar", name="avatar", accept="image/*")
         input(placeholder="Name", name="name", type="text", required, value=loggedInUser.name)
