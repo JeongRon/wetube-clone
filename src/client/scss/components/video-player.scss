@@ -1,10 +1,14 @@
 #videoContainer {
-  width: 100%;
   position: relative;
+  display: flex;
   video {
-    width: 100%;
+    border-radius: 10px;
+    background-color: white;
+    width: 1200px;
+    height: 600px;
   }
   .videoControls {
+    color: white;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
     &.showing {

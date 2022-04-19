@@ -21,26 +21,24 @@ block content
                     i.fas.fa-expand
     div.video__data
         p.video__title=video.title
+        p.video__createdAt=new Date(video.createdAt).toLocaleDateString("ko-kr", {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})
         p.video__owner Uploaded by 
             a(href=`/users/${video.owner._id}`)=video.owner.name
-        p.video__createdAt=new Date(video.createdAt).toLocaleDateString("ko-kr", {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})
         if String(video.owner._id) === String(loggedInUser._id)
             a(href=`${video.id}/edit`) Edit Video &rarr;
             br
             a(href=`${video.id}/delete`) Delete Video &rarr;
-    if loggedIn
-        div.video__add-comments
+        if loggedIn
             form.video__comment-form#commentForm
-                textarea(cols="30", rows="10", placeholder="Write a nice commment...")
-                button Add Comment
-    div.video__comments
+                button.video__comment-form__btn 댓글
+                textarea.video__comment-form__text(placeholder="Write a nice commment...")
         ul
             each comment in video.comments.reverse()
                 li.video__comment(data-id=comment.id)
                     i.fas.fa-comment
-                    span #{comment.text}
+                    p.video__comment__text #{comment.text}
                     if String(loggedInUser._id) === String(comment.owner._id)
-                        span#delete__comment   ❌
+                        p#delete__comment ❌
 block scripts
     script(src="/static/js/videoPlayer.js") 
     if loggedIn
