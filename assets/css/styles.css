@@ -294,12 +294,17 @@ input[type=submit]:disabled,
 #videoContainer {
   position: relative;
   display: flex;
-}
-#videoContainer video {
-  border-radius: 10px;
-  background-color: white;
   width: 1200px;
   height: 600px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+}
+#videoContainer video {
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
 }
 #videoContainer .videoControls {
   color: white;
